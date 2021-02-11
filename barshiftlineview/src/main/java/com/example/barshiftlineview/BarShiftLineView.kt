@@ -40,9 +40,9 @@ fun Canvas.drawBarShiftLine(scale : Float, w : Float, h : Float, paint : Paint) 
     translate(w / 2, h / 2)
     for (j in 0..1) {
         save()
-        scale(1f, 1f - 2 * j)
+        scale(1f - 2 * j, 1f - 2 * j)
         drawLine(w * 0.5f * sf3, 0f, w * 0.5f * sf3, h * sf1 * 0.5f, paint)
-        drawRect(RectF(0f, (h - barH), w * 0.5f * (sf2 - sf3), barH), paint)
+        drawRect(RectF(w * 0.5f * sf3, (h / 2 - barH), w * 0.5f * sf2 , h / 2), paint)
         drawRect(RectF(0f, 0f, w * 0.5f * sf3, h / 2), paint)
         restore()
     }
