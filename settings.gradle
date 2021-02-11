@@ -1,0 +1,3 @@
+include ':barshiftlineview'
+include ':app'
+rootProject.name = "LinkedBarLineShiftView"
