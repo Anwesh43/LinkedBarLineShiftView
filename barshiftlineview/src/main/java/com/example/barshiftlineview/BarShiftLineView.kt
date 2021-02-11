@@ -209,4 +209,13 @@ class BarShiftLineView(ctx : Context) : View(ctx) {
             }
         }
     }
+
+    companion object {
+
+        fun create(activity : Activity) : BarShiftLineView {
+            val view : BarShiftLineView = BarShiftLineView(activity)
+            activity.setContentView(view)
+            return view
+        }
+    }
 }
